@@ -1,0 +1,53 @@
+<head>
+  <title>meteor-join-filter</title>
+
+	<style>
+	table {
+		width: 100%;
+	}
+	table tr td {
+		 border: 2px solid gray;
+	}
+	</style>
+
+</head>
+
+<body>
+    <div id="external_links">
+    </div>
+    <div id="content">
+        {{> view_table}}
+    </div>
+</body>
+
+<template name="view_table">
+
+	<table>
+		<tr>
+			<th>
+				Author
+			</th>
+			<th>
+				Post
+			</th>
+			<th>
+				Comments
+			</th>
+		</tr>
+	{{ #each p in pac }}
+		<tr>
+			<td>
+				{{ p.author.author }}
+			</td>
+			<td>
+				{{ p.post }}
+			</td>
+			<td>
+				{{ stringify p.comments 'comment' }}
+			</td>
+		</tr>
+	{{ /each }}
+	</table>
+
+	{{ jp }}
+</template>
