@@ -1,1 +1,1 @@
-This is an example of using https://github.com/loredanacirstea/meteor-tabular-filter .
+Please see how the table is being published via Reactive:aggregate
